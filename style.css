@@ -64,7 +64,9 @@ body{
     margin-top: .4rem;
     color: var(--Cyan);
 }
-.card_one h4{
+.card_one .slogan_container{
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-top: .7rem;
     color: var(--Bright-Yellow);
 }
