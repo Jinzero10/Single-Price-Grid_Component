@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    /*Primary*/
+
+--Cyan: hsl(179, 62%, 43%);
+--ligth-cyan: hsl(179, 59%, 56%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+
+    /*Neutral*/
+
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    background-color: var(--Light-Gray);
+}
+.heading_sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+.container{
+    width: 40rem; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 13.5rem 16rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:  0px 7px 29px 0px rgba(100, 100, 111, 0.2); 
+}
+.card_one{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+.card_one, .card_two, .card_three{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 2rem;
+}
+.card_heading{
+    font-size: 1.0625rem;
+    margin-top: .4rem;
+    font-weight: 700;
+    color: var(--Light-Gray);
+}
+.card_one h2{
+    margin-top: .4rem;
+    color: var(--Cyan);
+}
+.card_one h4{
+    margin-top: .7rem;
+    color: var(--Bright-Yellow);
+}
+.card_one p{
+    line-height: 1.6rem;
+    color: var(--Grayish-Blue);
+}
+.dollar_paragh{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Light-Gray);
+}
+.dollar_paragh span{
+    font-size: 1rem;
+    font-weight: 400;
+    vertical-align: 20%;
+    color: var(--ligth-cyan);
+}
+.desc_paragh{
+    margin-top: -.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--Light-Gray);
+}
+.signup_btn{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+.card_three p{
+    font-weight: 400;
+    font-size:  0.890rem;
+    line-height: 1.3rem;
+    width: 13rem;
+    color: var(--Light-Gray);
+}
+.card_two{
+    background-color: var(--Cyan);
+}
+.card_three{
+    background-color: var(--ligth-cyan) ;
+}
+.attribution { 
+    font-size: .8rem; 
+    text-align: center; 
+}
+@media (max-width: 600px) {
+    body{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .container{
+        width: 20rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 19rem 1fr 16rem;
+    }
+    .card_one{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .attribution { 
+        margin-top: 1rem;
+        font-size: .7rem; 
+    }
+}
